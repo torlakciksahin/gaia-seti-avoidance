@@ -34,7 +34,7 @@ The model applies seven astrophysical thresholds to **1,754,135 Gaia DR3 stars**
 | R2 | Stellar age | < 3 Gyr |
 | R3 | Spectral type | O, B, A, F0–F4 |
 | R4 | Metallicity | [Fe/H] < −0.4 |
-| R5 | Multiplicity | ≥ 3 components |
+| R5 | Multiplicity | `non_single_star` ≥ 1 | Exclude all stars flagged as non-single (binary or higher)
 | R6 | Photometric variability | range_mag_g > 0.01 mag or VARIABLE flag |
 | R7 | M dwarf activity | rotation modulation or short-timescale variability |
 
