@@ -50,7 +50,7 @@ df['exclude_mass'] = df['mass_flame_spec'] > 1.5
 df['exclude_age']  = df['age_flame_spec'] < 3.0
 df['exclude_spec'] = df['spec_type'].isin(['O','B','A','F0-F4'])
 df['exclude_feh']  = df['mh_gspphot'] < -0.4
-df['exclude_mult'] = df['non_single_star'].fillna(0) >= 2
+df['exclude_mult'] = df['non_single_star'].fillna(0) >= 1
 df['exclude_var']  = (
     (df['range_mag_g_fov'].fillna(0) > 0.01) |
     (df['phot_variable_flag'] == 'VARIABLE')
