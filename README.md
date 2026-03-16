@@ -52,7 +52,8 @@ Torlakcık Catalog/
 │   ├── figure3_synthetic_vs_empirical.png
 │   ├── figure4_decision_flow.png
 │   ├── figure5_sensitivity_analysis.png
-│   └── figure6_skymap.png
+│   ├── figure6.1_skymap_combined.png
+│   └── figure6.2_skymap_seperate.png
 └── README.md
 ```
 
