@@ -93,7 +93,7 @@ for col, code, label in [
     ('exclude_age', 'R2','Age < 3 Gyr'),
     ('exclude_spec','R3','Spectral O/B/A/F0-F4'),
     ('exclude_feh', 'R4','[Fe/H] < -0.4'),
-    ('exclude_mult','R5','Multiplicity ≥ 3'),
+    ('exclude_mult','R5','Multiplicity ≥ 1'),
     ('exclude_var', 'R6','Photometric variability'),
     ('exclude_act', 'R7','Active M dwarf'),
 ]:
