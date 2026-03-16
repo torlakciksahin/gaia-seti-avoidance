@@ -27,7 +27,7 @@ AND ap.mh_gspphot IS NOT NULL
 AND fl.mass_flame_spec IS NOT NULL
 AND fl.age_flame_spec IS NOT NULL
 """
-print("Gaia DR3 verisi çekiliyor...")
+print("Data is loading...")
 job = Gaia.launch_job_async(query)
 df = job.get_results().to_pandas()
 print(f"Veri geldi: {df.shape}")
@@ -87,7 +87,7 @@ print(f"\nToplam:   {total:,}")
 print(f"Dışlanan: {excluded:,} ({excluded/total*100:.1f}%)")
 print(f"Korunan:  {retained:,} ({retained/total*100:.1f}%)")
 
-print("\nKriterlere göre:")
+print("\nComparison:")
 for col, code, label in [
     ('exclude_mass','R1','Mass > 1.5 M⊙'),
     ('exclude_age', 'R2','Age < 3 Gyr'),
@@ -103,4 +103,4 @@ for col, code, label in [
 # Save
 csv_path = os.path.join(save_dir, 'gaia_seti_avoidance_robust.csv')
 df.to_csv(csv_path, index=False)
-print(f"\nCSV kaydedildi: {csv_path}")
+print(f"\nCSV saved: {csv_path}")
