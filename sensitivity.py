@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import os
 
-save_dir = os.path.join(os.path.expanduser('~'), 'Desktop', 'seti_project')
+save_dir = r'C:\Users\PC\OneDrive\Desktop\avoidance model'
 os.makedirs(save_dir, exist_ok=True)
 
 
@@ -44,7 +44,7 @@ def run_sensitivity(df):
         excl = (
             df['exclude_mass'] | df['exclude_age'] | df['exclude_spec'] |
             df['exclude_feh'] | df['exclude_mult'] |
-            (df['range_mag_g_fov'] > t) | df['exclude_act']
+            (df['range_mag_g_fov'].fillna(0) > t) | df['exclude_act']
         ).mean() * 100
         var_excl.append(excl)
 
@@ -54,7 +54,7 @@ def run_sensitivity(df):
 
     axes[0,0].plot(mass_thresholds, mass_excl, 'steelblue', linewidth=2)
     axes[0,0].axvline(1.5, color='red', linestyle='--', label='Baseline (1.5 M⊙)')
-    axes[0,0].axhline(65.3, color='gray', linestyle=':', alpha=0.7)
+    axes[0,0].axhline('excluded', color='gray', linestyle=':', alpha=0.7)
     axes[0,0].set_xlabel('Mass Threshold (M⊙)')
     axes[0,0].set_ylabel('Exclusion Rate (%)')
     axes[0,0].set_title('Mass Threshold Sensitivity')
