@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import os
 
 # Recording Folder
-save_dir = os.path.join(os.path.expanduser('~'), 'Desktop', 'seti_project')
+save_dir = r'C:\Users\PC\OneDrive\Desktop\avoidance model'
 os.makedirs(save_dir, exist_ok=True)
 
 # Gaia DR3 Data
@@ -101,6 +101,6 @@ for col, code, label in [
     print(f"  {code} {label}: {n:,} ({n/total*100:.1f}%)")
 
 # Save
-csv_path = os.path.join(save_dir, 'gaia_seti_avoidance_robust.csv')
+csv_path = os.path.join(save_dir, 'gaia_seti_avoidance_robust_corrected.csv')
 df.to_csv(csv_path, index=False)
 print(f"\nCSV saved: {csv_path}")
