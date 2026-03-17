@@ -64,6 +64,10 @@ Full exclusion catalog (N = 1,754,135) will be made available on Zenodo upon pub
 
 Gaia DR3 data accessed via ESA TAP service:
 `https://gea.esac.esa.int/tap-server/tap`
+The Torlakcık Catalog csv fie contains ~1.75 million rows and exceeds the row limits of common spreadsheet software such as Microsoft Excel (1,048,576 rows).
+The dataset is intended for programmatic analysis using tools such as Python (pandas), R, or dedicated astronomical catalog software.
+
+For large-table inspection, tools such as ExtremeCSV or TOPCAT are recommended.
 
 ---
 
