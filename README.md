@@ -7,7 +7,10 @@
 
 **Torlakcık Catalog** is an open-source stellar exclusion catalog and analysis pipeline for operational SETI target selection, applied to the full Gaia DR3 dataset.
 
-This repository contains the analysis code, exclusion catalog, and publication figures associated with:
+This repository contains the analysis pipeline, figure generation scripts,
+and sensitivity analysis used in the study.
+
+The full exclusion catalog is archived on Zenodo (see Data section).
 
 > **"Where Not to Look: A Parametric Avoidance Model for SETI Target Selection"**
 > Torlakcık, Ş. (2026) — *manuscript in preparation*
@@ -60,14 +63,40 @@ Torlakcık Catalog/
 
 ## Data
 
-Full exclusion catalog (N = 1,754,135) will be made available on Zenodo upon publication.
 
-Gaia DR3 data accessed via ESA TAP service:
-`https://gea.esac.esa.int/tap-server/tap`
+The **Torlakcık Catalog**, a Gaia DR3–based exclusion catalog containing
+1,754,135 stars, is publicly available on Zenodo:
+https://doi.org/10.5281/zenodo.19054136
 The Torlakcık Catalog csv fie contains ~1.75 million rows and exceeds the row limits of common spreadsheet software such as Microsoft Excel (1,048,576 rows).
 The dataset is intended for programmatic analysis using tools such as Python (pandas), R, or dedicated astronomical catalog software.
-
 For large-table inspection, tools such as ExtremeCSV or TOPCAT are recommended.
+
+# TAP
+```sql
+Gaia DR3 data accessed via ESA TAP service:
+SELECT
+gs.source_id, gs.ra, gs.dec,
+ap.teff_gspphot, ap.mh_gspphot,
+ap.logg_gspphot,
+fl.mass_flame_spec, fl.age_flame_spec,
+gs.non_single_star,
+gs.phot_variable_flag,
+vs.range_mag_g_fov,
+vs.in_vari_rotation_modulation,
+vs.in_vari_short_timescale
+FROM gaiadr3.gaia_source AS gs
+JOIN gaiadr3.astrophysical_parameters AS ap
+ON gs.source_id = ap.source_id
+JOIN gaiadr3.astrophysical_parameters_supp AS fl
+ON gs.source_id = fl.source_id
+LEFT JOIN gaiadr3.vari_summary AS vs
+ON gs.source_id = vs.source_id
+WHERE ap.teff_gspphot IS NOT NULL
+AND ap.mh_gspphot IS NOT NULL
+AND fl.mass_flame_spec IS NOT NULL
+AND fl.age_flame_spec IS NOT NULL
+
+
 
 ---
 
