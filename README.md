@@ -1,7 +1,7 @@
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19054136.svg)](https://doi.org/10.5281/zenodo.19054136)
+
 # Torlakcık Catalog
 ### A Parametric Avoidance Model for SETI Target Selection
-
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19054136.svg)](https://doi.org/10.5281/zenodo.19054136)
 ---
 
 ## Overview
