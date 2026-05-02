@@ -1,0 +1,67 @@
+# -
+# stellar_avoidance — Gaia DR3 configuration
+#
+# Pre-configured for Gaia DR3 (I/355/gaiadr3) column names.
+# Adjust thresholds as needed for your science case.
+# -
+
+input_path: ""          # Set to your FITS/CSV path
+input_format: auto      # auto-detect from file extension
+
+# Which criteria to apply
+enabled_criteria:
+  - R1    # High mass
+  - R2    # Young age
+  - R3    # Early spectral type
+  - R4    # Low metallicity
+  - R5    # Multiplicity
+  - R6    # Photometric variability
+  - R7    # M-dwarf activity
+
+# Exclusion thresholds
+thresholds:
+  mass: 1.5            # M_sun
+  age: 3.0             # Gyr
+  metallicity: -0.4    # [Fe/H]
+  variability: 0.01    # mag (range_mag_g_fov)
+  parallax_over_error: 5.0
+
+# Age filtering mode
+use_age_upper: true    # true = uncertainty-aware (age_flame_spec_upper)
+                       # false = hard cut on age_flame_spec
+
+# Output
+output_dir: ./output
+output_base: torlakcik_catalog
+export_formats:
+  - csv
+  - fits
+
+# G-band zero-point (Riello et al. 2021)
+g_zeropoint: 25.6883657251
+
+# - Column mapping (Gaia DR3)
+columns:
+  source_id: source_id
+  ra: ra
+  dec: dec
+  parallax: parallax
+  parallax_error: parallax_error
+  phot_g_mean_mag: phot_g_mean_mag
+  phot_g_mean_flux: phot_g_mean_flux
+  phot_bp_mean_mag: phot_bp_mean_mag
+  phot_rp_mean_mag: phot_rp_mean_mag
+  bp_rp: bp_rp
+  teff: teff_gspphot
+  logg: logg_gspphot
+  mass_flame: mass_flame
+  age_lower: age_flame_spec_lower
+  age_upper: age_flame_spec_upper
+  age: age_flame_spec
+  metallicity: metallicity_gspphot_upper
+  feh: feh_gspphet
+  nss: nss
+  phot_variable_flag: phot_variable_flag
+  range_mag_g_fov: range_mag_g_fov
+  in_vari_rotation_modulation: in_vari_rotation_modulation
+  in_vari_short_timescale: in_vari_short_timescale

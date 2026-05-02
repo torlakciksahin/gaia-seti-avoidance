@@ -1,0 +1,69 @@
+# -
+# stellar_avoidance — Generic catalog configuration
+#
+# Template for any stellar catalog. Map your column names
+# to the internal names below. Only columns required by
+# enabled criteria need to be mapped.
+# -
+
+input_path: ""          # REQUIRED: path to your catalog
+input_format: auto      # auto | csv | fits | votable
+
+# Which criteria to apply (comment out to disable)
+enabled_criteria:
+  - R1
+  - R2
+  - R3
+  - R4
+  - R5
+  - R6
+  - R7
+
+# Exclusion thresholds
+thresholds:
+  mass: 1.5            # M_sun
+  age: 3.0             # Gyr
+  metallicity: -0.4    # [Fe/H]
+  variability: 0.01    # mag
+  parallax_over_error: 5.0
+
+# Age filtering mode
+use_age_upper: true
+
+# Output
+output_dir: ./output
+output_base: avoidance_catalog
+export_formats:
+  - csv
+  - fits
+
+g_zeropoint: 25.6883657251
+
+# - Column mapping
+# Replace values with YOUR catalog's column names.
+# If a column doesn't exist, leave it empty or remove the line.
+# Missing columns → criteria that need them will be skipped.
+columns:
+  source_id: source_id
+  ra: ra
+  dec: dec
+  parallax: parallax
+  parallax_error: parallax_error
+  phot_g_mean_mag: phot_g_mean_mag
+  phot_g_mean_flux: ""          # optional, mag computed if missing
+  phot_bp_mean_mag: ""          # optional, for bp_rp
+  phot_rp_mean_mag: ""          # optional, for bp_rp
+  bp_rp: bp_rp                  # optional, computed from BP-RP if missing
+  teff: teff                    # REQUIRED for R3
+  logg: logg                    # optional
+  mass_flame: mass              # REQUIRED for R1
+  age_lower: age_lower          # optional, for uncertainty-aware R2
+  age_upper: age_upper          # REQUIRED for R2 (uncertainty-aware)
+  age: age                      # REQUIRED for R2 (hard cut mode)
+  metallicity: ""               # optional
+  feh: feh                      # REQUIRED for R4
+  nss: nss                      # REQUIRED for R5
+  phot_variable_flag: phot_variable_flag  # REQUIRED for R6
+  range_mag_g_fov: range_mag_g_fov        # REQUIRED for R6
+  in_vari_rotation_modulation: in_vari_rotation_modulation   # REQUIRED for R7
+  in_vari_short_timescale: in_vari_short_timescale           # REQUIRED for R7
