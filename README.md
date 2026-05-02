@@ -1,4 +1,4 @@
-# Torlakcık Catalog
+# Torlakcik Catalog
 
 ### *Where Not to Look:* A Parametric Avoidance Model for SETI Target Selection
 
@@ -12,9 +12,9 @@ Imagine you have a radio telescope and a few thousand hours of observing time. T
 
 Most SETI surveys pick targets based on proximity — the closest stars, the brightest stars. But if you're looking for technological signatures around stars that could *actually* host habitable worlds, you need a different approach. You need to know **where not to look**.
 
-The **Torlakcık Catalog** is a stellar exclusion catalog that does exactly that. It applies seven interpretable astrophysical criteria to 1.74 million Gaia DR3 stars and tells you which ones to skip — and *why* — so you can spend your telescope time on the stars that matter.
+The **Torlakcik Catalog** is a stellar exclusion catalog that does exactly that. It applies seven interpretable astrophysical criteria to 1.74 million Gaia DR3 stars and tells you which ones to skip — and *why* — so you can spend your telescope time on the stars that matter.
 
-> Torlakcık, Ş. (2026) — *manuscript in preparation*
+> Torlakcik, S. (2026) — *manuscript in preparation*
 
 ---
 
