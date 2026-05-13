@@ -61,6 +61,9 @@ How does our habitability-driven approach compare to the proximity-driven Breakt
 Over half of BL's primary targets would be excluded by our criteria — mostly due to low metallicity. This isn't a criticism of BL; it's a reflection of two fundamentally different survey philosophies. BL casts a wide net based on proximity. We ask a different question: *which nearby stars are actually worth listening to?*
 
 ---
+## Related
+
+- [stellar-avoidance](https://github.com/torlakciksahin/stellar-avoidance) -- The catalog-agnostic, reusable version of this pipeline. Same R1-R7 logic, but configurable via YAML for any stellar survey. If you want to apply these (or your own) criteria to a different catalog, use that one.
 
 ## Getting the Data
 
@@ -152,9 +155,6 @@ pip install astroquery pandas numpy matplotlib scipy astropy
 
 ---
 
-## Related
-
-- [stellar-avoidance](https://github.com/torlakciksahin/stellar-avoidance) -- The catalog-agnostic, reusable version of this pipeline. Same R1-R7 logic, but configurable via YAML for any stellar survey. If you want to apply these (or your own) criteria to a different catalog, use that one.
 
 ## Contributing
 
