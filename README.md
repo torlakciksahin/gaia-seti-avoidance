@@ -161,7 +161,6 @@ pip install astroquery pandas numpy matplotlib scipy astropy
 Found a bug? Have an idea for a new criterion or a different threshold? Issues and pull requests are welcome.
 
 If you use this catalog in your work, please cite the Zenodo record and the associated manuscript.
-
 ---
 
 ## Citation
