@@ -179,7 +179,7 @@ If you use this catalog in your work, please cite the Zenodo record and the asso
   doi     = {10.1088/1538-3873/ae75f3},
   url     = {[https://doi.org/10.1088/1538-3873/ae75f3](https://doi.org/10.1088/1538-3873/ae75f3)}
 }
-
+```
 ## Acknowledgments
 
 This work made use of data from the European Space Agency (ESA) mission [Gaia](https://www.cosmos.esa.int/gaia), processed by the Gaia Data Processing and Analysis Consortium ([DPAC](https://www.cosmos.esa.int/web/gaia/dpac/consortium)).
