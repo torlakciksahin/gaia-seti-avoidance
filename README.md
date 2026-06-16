@@ -168,8 +168,8 @@ If you use this catalog in your work, please cite the Zenodo record and the asso
 1. Peer-Reviewed Paper (PASP)
 
 ```bibtex
-@article{torlakcik2026where,
-  author  = {Torlakc{\i}k, {\c{S}}ahin},
+@article{torlakcik2026,
+  author  = {Torlakcik, Sahin},
   title   = {Where Not to Look: A Parametric Avoidance Model for SETI Target Selection},
   journal = {Publications of the Astronomical Society of the Pacific},
   year    = {2026},
