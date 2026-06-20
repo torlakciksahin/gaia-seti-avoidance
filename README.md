@@ -2,9 +2,17 @@
 
 ### *Where Not to Look:* A Parametric Avoidance Model for SETI Target Selection
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19956677.svg)](https://doi.org/10.5281/zenodo.19956677)
+
+> "There is a great satisfaction in building good tools for other people to use."
+> — Freeman Dyson
 
 
+
+Article: [![DOI](https://img.shields.io/static/v1?label=DOI&message=10.1088/1538-3873/ae75f3&color=blue)](https://doi.org/10.1088/1538-3873/ae75f3)
+
+Torlakcik Catalog: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19956677.svg)](https://doi.org/10.5281/zenodo.19956677)
+
+Catalog-Agnostic Configurable Framework for Stellar Avoidance: [stellar-avoidance](https://github.com/torlakciksahin/stellar-avoidance)
 
 ---
 
@@ -14,7 +22,7 @@ Most SETI surveys pick targets based on proximity — the closest stars, the bri
 
 The **Torlakcik Catalog** is a stellar exclusion catalog that does exactly that. It applies seven interpretable astrophysical criteria to 1.74 million Gaia DR3 stars and tells you which ones to skip — and *why* — so you can spend your telescope time on the stars that matter.
 
-> Torlakcik, S. (2026) — *manuscript in preparation*
+> Torlakcik, S. 2026, PASP, 138, 064505
 
 ---
 
